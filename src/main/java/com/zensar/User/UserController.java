@@ -36,7 +36,7 @@ public class UserController {
 	}
 	
 	@DeleteMapping("/api")
-	public String deleteUser(User user) {
+	public String deleteUser(@RequestBody User user) {
 		userService.deleteUser(user);
 		return "User deleted";
 	}
