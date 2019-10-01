@@ -29,10 +29,6 @@ public class UserService {
 		return list.stream().filter(t ->t.getId().equals(id)).findFirst().get();
 	}
 	
-	public void deleteUser(User user) {
-            list.remove(user);
-	}
-	
 	public User deleteUser(String id) {
 		User duser = null;
 		for(User u : list) {
