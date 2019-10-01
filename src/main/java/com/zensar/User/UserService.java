@@ -32,4 +32,16 @@ public class UserService {
 	public void deleteUser(User user) {
             list.remove(user);
 	}
+	
+	public User deleteUser(String id) {
+		User duser = null;
+		for(User u : list) {
+			if(u.getId().equals(id)) {
+				list.remove(u);
+				duser=u;
+				break;
+			}
+		}
+		return duser;
+	}
 }
