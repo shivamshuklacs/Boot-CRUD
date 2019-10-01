@@ -35,10 +35,9 @@ public class UserController {
 		return userService.getUserByid(id);
 	}
 	
-	@DeleteMapping("/api")
-	public String deleteUser(@RequestBody User user) {
-		userService.deleteUser(user);
-		return "User deleted";
+	@DeleteMapping("/api/{id}")
+	public User deleteUser(@PathVariable String id) {
+	return userService.deleteUser(id);
 	}
 
 }
